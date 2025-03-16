@@ -109,11 +109,16 @@
       100% { transform: scale(1); }
     }
 
+    .spacer {
+      margin-top: 15px;
+      display: block;
+    }
+
   </style>
 </head>
 <body>
   <div class="status">
-    <h3>CloudKeeper - Credential Helper</h3>
+    <h3>CredKeeper </h3>
     <h4>For .aws/credentials file</h4>
     <p id="credentialsFile"></p>
     <!-- Button to copy .aws/credentials file content -->
@@ -123,6 +128,23 @@
     <p id="env_variables"></p>
     <!-- Button to copy env variables content -->
     <button class="copy-button" id="copyEnvVariablesButton">Copy Env Variables</button>
+
+    <span class="spacer"></span>
+    
+    <details>
+      <summary><strong>Specify Account & Role</strong></summary>
+
+    <span class="spacer"></span>
+
+      <label class="dropdown-label" for="account">Account ID:</label>
+      <input type="text" id="account" class="input-field" placeholder="Enter Account ID">
+
+    <span class="spacer"></span>
+      
+      <label class="dropdown-label" for="role">Role:</label>
+      <input type="text" id="role" class="input-field" placeholder="Enter Role">
+    </details>
+
   </div>
   <script src="popup.js"></script>
 </body>
